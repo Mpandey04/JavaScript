@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra Bag exercise</title>
+    <style>
+        .container{
+            width: 100%;
+            height: 200px;
+            background-color: #212121;
+            color: #fff;
+            
+        }
+        .btn-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            margin-right: 30px;
+            border: none;
+            width: 250px;
+            height: 40px;
+            text-align: center;
+            color: #000;
+            margin-top: 50px;
+            
+        }
+        .count{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+        .btn{
+            background-color: greenyellow;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        #wishlist{
+            flex-grow: 0.5;
+            font-size: 1.5em;
+            border-radius: 10px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="btn-container">
+            <button class="btn" onclick="cart()">Add to bag</button><button id="wishlist" onclick="wishlist()">Move to wishList</button><button class="btn" onclick="OnePlusOne()">Add 1+1 sale item</button>
+        </div>
+        <h1 class="count"></h1>
+    </div>
+
+
+    <script>
+        let cartQuantity=0;
+        let count;
+        document.querySelector('.count').textContent=`Your Bag has ${cartQuantity}`
+        
+        let cart= function (){
+            cartQuantity+=1;
+            SameWork()
+        }
+
+        // Arrow Function
+        const SameWork=()=>{
+            count=document.querySelector('.count')
+            count.textContent=`Your Bag has ${cartQuantity}`
+        }
+        let wishlist=()=>{
+            cartQuantity-=1;
+            SameWork()
+        }
+        const OnePlusOne=()=>{
+            cartQuantity+=2
+            SameWork()
+        }
+    </script>
+
+</body>
+</html>
