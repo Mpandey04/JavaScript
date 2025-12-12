@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice set1</title>
+
+    <style>
+        .cart-container{
+            
+            margin-top: 50px;
+            margin-right: 50px;
+            
+            
+        }
+        button{
+            margin-top: 20px;
+            margin-right: 30px;
+        }
+        .add{
+            border: none;
+            width: 150px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: greenyellow;
+            text-align: center;
+            font-size: 18px;
+
+        }
+        .wishlist{
+            width: 150px;
+            padding: 2px;
+            border: 2px solid #000;
+            height: 40px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        1.create a button with text click.
+        2.create a buttons with class and id.
+        3.create a pragraph
+        4.add colors to two buttons.
+        5.Add proper html structure.
+        6.change page title
+        7.Add script element to page to show welcome alert.
+        8.Add onclick alert on add to bag and wishlisht buttons.
+    -->
+
+        <div class="container">
+            <h1 class="my-heading">Welcome to my website</h1>
+            <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, corrupti.</p>
+            <button id="one">Click </button>
+            <button id="two">Click me</button>
+            <button id="three">click Here</button>
+        </div>
+
+        <div class="cart-container">
+            <button class="add" onclick="alert('Successfully added to bag')">Add to Cart</button>
+            <button class="wishlist" onclick="alert('wishlist done')">❤️wishlist</button>
+        </div>
+
+        <script>
+            // alert("Welcome mr.manish")
+            const button=document.querySelector('#two');
+            const button2=document.querySelector('#three');
+
+            button.style.color="red";
+            button2.style.color="blue";
+
+            const title=document.querySelector('title');
+            title.textContent="Changing Title"
+            console.log(title);
+
+            const Add=document.querySelector('.add');
+           Add.alert
+        </script>
+</body>
+</html>
