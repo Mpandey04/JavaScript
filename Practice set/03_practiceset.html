@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="name"></h1>
+    <!-- 
+    1.Save your name in a variable inside script tag.
+
+    2.Display name from the variable on the page.
+
+    3.calculate the cost of myntra bag and keep it in a variable.
+
+    4.show it to console.
+
+    5.keep GST percentage as constant
+
+    6.use eval method from math to convert string calculation into result.
+    
+    
+    -->
+
+
+    <script>
+        const MyName="Manish Kumar Pandey"
+        // document.querySelector(".name").textContent=MyName
+        // document.querySelector(".name").innerText=MyName
+        document.querySelector(".name").innerHTML=MyName
+
+        // Price details
+        let bagPrice = 1999;      // Base price of bag
+        let discount = (bagPrice*10)/100;      // Discount
+        let deliveryCharge = 99; // Delivery fee
+        let gstRate = 18;        // GST in %
+
+        /*
+        Step 1: price after discount
+        Step 2: GST calculation
+        Step 3: final total
+        */
+
+        // Price after discount
+        let priceAfterDiscount = bagPrice - discount;
+
+        // GST amount
+        let gstAmount = (priceAfterDiscount * gstRate) / 100;
+
+        // Final cost
+        let myntraBagCost = priceAfterDiscount + gstAmount + deliveryCharge;
+
+        const total=eval(Math.round(myntraBagCost))
+
+        
+        
+    </script>
+</body>
+</html>
